@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document Object Model (DOM)</title>
+</head>
+
+<body>
+  <li><b>Document Object Model (DOM)</b></li>
+  <li>Using DOM JavaScript can access and change elements of an HTML document.</li>
+  <li> When web page is loaded, the browser creates Document Object Model ofpage.</li>
+  <li>The HTML DOM model is constructed as a tree of Objects.</li>
+  <li><b>.querySelector()</b>let us get any element from page & put it insideJS. </li>
+  <li>Input element have a self closing tag called this is <b>Void Element</b>.</li>
+  <li>The<b>.value</b>is a property to get the Input element value.</li>
+  <li>Click and Keydown are event and Onclick and Onkeydown are event listeners.</li>
+  <li>Every event listners get<b>event</b>object it has a bunch of information.</li>
+
+
+
+  <button class="js-button">Yash</button>
+
+  <!-- //**************************DOM Mini Projects.***************************// -->
+  <h1>YouTube Subscribe Button</h1>
+
+  <button class="js-subscribe" onclick="isSubscribed()">Subscribe</button>
+
+  <h1>Amazon Shipping Calculator</h1>
+
+  <p>Orders under $40 = +$10 Shipping.</p>
+  <p>Orders over $40 = FREE Shipping.</p>
+
+  <input placeholder="Cost of Order" class="js-input-cost" onkeydown="onKeyDown()">
+  <button onclick="calculateCost()">Calculate</button>
+  <p class="js-display-total"></p>
+
+  <input placeholder="Enter Your Name" class="js-input-name" onkeydown="onKeyDownEnter()">
+  <button onclick="userName()">Submit</button>
+  <p class="js-display-name"></p>
+  <input onkeyup="inputDataShow()" class="js-inputdata">
+  <p class="js-displayresult"></p>
+  <script>
+    //************************** Normal Practice of DOM *****************************
+    // console.log(document.title);
+    // console.log((document.title.innerHTML = "DOM"));
+    // console.log(document.body);
+    // console.log(typeof document.body);
+    // console.log((document.body.innerHTML = "DOM"));
+    // console.log(document.querySelector("button").innerHTML);
+    // let buttonElement = document.querySelector(".js-button").innerHTML;
+    // console.log(buttonElement);
+    // document.querySelector("button").innerHTML = "Hello Yash";
+
+
+    function userName() {
+      let inputName = document.querySelector(".js-input-name");
+      let inputValue = inputName.value;
+      document.querySelector(".js-display-name").innerHTML = `Your Name is : ${inputValue}`
+    }
+    function onKeyDownEnter() {
+      if (event.key === "Enter") {
+        userName();
+      }
+    }
+
+    function inputDataShow() {
+      let inputData = document.querySelector(".js-inputdata");
+      let inputValue = inputData.value;
+      document.querySelector(".js-displayresult").innerHTML = `${inputValue}`;
+    }
+
+    //**************************DOM Mini Projects.*****************************
+
+    function isSubscribed() {
+
+      let subButton = document.querySelector(".js-subscribe");
+
+      if (subButton.innerHTML === "Subscribe") {
+        subButton.innerHTML = "Subscribed";
+      }
+      else {
+        subButton.innerHTML = "Subscribe";
+      }
+    }
+
+    function calculateCost() {
+      let costInput = document.querySelector(".js-input-cost");
+      costValue = Number(costInput.value) * 100;
+
+      if (costValue <= 40) {
+        costValue += 10
+      } else {
+        costValue;
+      }
+
+      document.querySelector(".js-display-total").innerHTML = `The Total cost of Shipping is : $${costValue / 100}`;
+    }
+
+    function onKeyDown() {
+      if (event.key === "Enter") {
+        calculateCost();
+      }
+    }
+  </script>
+</body>
+
+</html>

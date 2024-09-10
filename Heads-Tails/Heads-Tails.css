@@ -1,0 +1,46 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(120, 113, 204);
+    background: radial-gradient(circle, rgba(120, 113, 204, 1) 0%, rgba(148, 187, 233, 1) 43%, rgba(207, 179, 213, 1) 66%);
+}
+
+.container {
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+    text-align: center;
+    background-color: #F6ECA9;
+    padding: 8vh 12vw;
+    border-radius: 25px;
+    box-shadow: rgb(101, 211, 255) 0px 3px 8px;
+    border: 2px solid rgb(19, 35, 81);
+}
+
+.cssBtn1 {
+    background-color: #c3ffb6;
+    padding: 4px 8px;
+    border-radius: 14px;
+}
+
+.cssBtn2 {
+    background-color: #c3ffb6;
+    padding: 4px 14px;
+    border-radius: 14px;
+}
+
+.cssBtn3 {
+    background-color: #ffd7cb;
+    padding: 4px 14px;
+    border-radius: 14px;
+}
+
+
+.mainDiv {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}

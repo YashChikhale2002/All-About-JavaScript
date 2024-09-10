@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numbers & Math</title>
+</head>
+
+<body>
+  <li>In JavaScript (+,-,*,/) These are called <b>Operators</b>.</li>
+  <li>The * and / Prioritized first from any operators in JavaScript.</li>
+  <li>The Math in JavaScript solve in left to right manner.</li>
+  <li>The Bracket Are prioritized to solve first in every math problem.</li>
+  <li>Calculation with Floats are sometimes inaccurate.</li>
+  <li>Do the calculation in cents. 100 cents = $1. Then convert back to $.</li>
+  <li>Calculation in cents are like 22 + 22 if you have 2.2 + 2.2.</li>
+  <li>Aftercalculate convert it back in Float using (22+22)/100.</li>
+  <li>Math.Round is use to convert the float to the closest number.</li>
+  <li>Remember that 1% = 1/100 =0.1 so that how you add % value in any sum.</li>
+  <script>
+    console.log(2 + 2 * 4);
+    console.log((2 + 2) * 4);
+    console.log(2 + 2 * 4 * 5);
+    console.log((2 + 2 * 4) * 5);
+    console.log(5.2 + 5.4);
+    console.log(52 + 54);
+    console.log((52 + 54) / 100);
+    console.log(Math.round(2.2));
+    console.log(Math.round(2.8));
+    console.log(Math.round((52 + 54) / 100));
+    console.log(10 + 3 * 8 + 5);
+    console.log((10 + 3 * 8 + 5) / 3);
+    console.log(18.5 + 7.5 * 2);
+    console.log((18.5 + 7.5 * 2) * 0.1);
+    console.log((18.5 + 7.5 * 2) * 0.2);
+    console.log((2095 + 1899 + 799) / 100);
+    console.log((2095 + 1899 + 799 + 499) / 100);
+    console.log(((2095 + 1899 + 799 + 499) * 0.1) / 100);
+    console.log(
+      (2095 + 1899 + 799 + 499) / 100 +
+      Math.round((2095 + 1899 + 799 + 499) * 0.1) / 100
+    );
+    console.log(Math.ceil(2.2));
+    console.log(Math.floor(2.8));
+    console.log((Fahrenheit = (25 * 9) / 5 + 32)); //77
+    console.log((Celsius = ((86 - 32) * 5) / 9)); //30
+    console.log((Fahrenheit = (-5 * 9) / 5 + 32)); //23
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="Rock-Paper-Scissors.css" />
+  </head>
+
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <button class="js-Rock-button">Rock</button>
+    <button class="js-Paper-button">Paper</button>
+    <button class="js-Scissors-button">Scissors</button>
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+    <button class="js-Score">Reset Score</button>
+    <button class="js-AutoPlay">Auto Play</button>
+    <p class="js-reset-confirmation"></p>
+    <h3>Workflow of Rock Paper Scissors</h3>
+    <div>
+      <li>First of all we create 3 buttons with onclick event.</li>
+      <li>Then we create a function which generates a random number.</li>
+      <li>Based on the random numbers it defines rock, paper, scissors.</li>
+      <li>Then we create function for player move.</li>
+      <li>Then we compare both functions using if-else. to choses winner.</li>
+      <li>We use return statement to make block scope a global scope var.</li>
+      <li>Then Show the final result in alert.</li>
+      <p>
+        <strong>Summary : </strong>When user clicks a button from three buttons
+        it calls a palyGame funtion and it compare the compMove from
+        computerMove and playerMove from the main function and the give the
+        result on the pop-up.
+      </p>
+    </div>
+    <script src="Rock-Paper-Scissors.js"></script>
+  </body>
+</html>

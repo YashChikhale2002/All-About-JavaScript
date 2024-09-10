@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Objects</title>
+</head>
+
+<body>
+  <li>An Object let us group multiple values together.</li>
+  <li>Object contains Key : Value pair called Poperty : Value pair</li>
+  <li>The value can be accessed through Property.</li>
+  <li>Product.name => This is how access a value using property.</li>
+  <li>Product.name => This us called <b>Dot Notation</b>.</li>
+  <li>Product[name] => This us called <b>Bracket Notation</b>.</li>
+  <li>It lets us use properties that don't work with dot notation.</li>
+  <li>console.log, math.random, JSON, Local Storage, etc.</li>
+  <li>These are called <b>Built-in Objects</b>.</li>
+  <li>JSON stands for JavaScript Object Notation.</li>
+  <li>JS Object and JSON both are almost similar.</li>
+  <li>But JSON has less features than JS Object.</li>
+  <li>A JS Object only make sense in JavaScript</li>
+  <li>JSON syntax can be understood by almost every programming language.</li>
+  <li>We use JSON to send data between computers & when we Store Data.</li>
+  <li>Conversion between JS Object & JSON we use Built-in JSON Object.</li>
+  <li>Local Storage is used to save values more permanentely</li>
+  <li>Local Storage only support string ("").</li>
+  <li>JS automatically wraps a string into object called <b>Auto-Boxing</b>.</li>
+  <li>In object there are only references we made using another var.</li>
+  <li>Not Copy the object only the references of that object memory location.</li>
+  <li>This is called <b>Copy by References</b></li>
+  <script>
+    let Product = {
+      name: "basketball",
+      price: 2095,
+      func: function func1() {
+        console.log("This is how function calling in object!");
+      },
+    };
+
+    console.log(Product);
+    console.log(Product.price);
+    console.log((Product.price += 500));
+    console.log((Product["delivery - time"] = "3 days"));
+    console.log(Product);
+    console.log(Product.func());
+    //conversion of JS Object and JSON Object.
+    let jsToJsonObject = JSON.stringify(Product);
+    console.log(jsToJsonObject);
+    let jsonToJsObject = JSON.parse(jsToJsonObject);
+    console.log(jsonToJsObject);
+    let autoBoxing = "hello".toUpperCase();
+    console.log(autoBoxing);
+    const object1 = {
+      name: "Yash"
+    }
+    let object2 = object1;
+    console.log(object2)
+    object1.name = "Ayush";
+    console.log(object2)
+    let object3 = {
+      name: "Ayush"
+    }
+    console.log(object1 === object3)
+    console.log(object1 === object2)
+    const { name } = object1;//Destructuring
+    console.log(name)
+
+    let object4 = {//Shorthand Property
+      name,
+      method() {
+        console.log("Shorthand Method");
+      }
+    }
+    console.log(object4)
+    console.log(object4.method())
+
+    let product = {
+      basketball: 2095,
+    }
+    console.log(product.basketball)
+    console.log(product.basketball += 500)
+    product["delivery time"] = "3 days"
+    console.log(product)
+    let product1 = {
+      name: "Apple",
+      price: "$20"
+    }
+    let product2 = {
+      name: "Graps",
+      price: "$40"
+    }
+    function comparePrice(product1, product2) {
+      if (product1.price < product2.price) {
+        return product1;
+      } else {
+        return product2
+      }
+    }
+    console.log(comparePrice(product1, product2))
+
+    function isSameProduct(product1, product2) {
+      return product1.name === product2.name &&
+        product1.price === product2.price;
+    }
+    console.log(isSameProduct(product1, product2))
+    console.log("HELLO YASH!".toLowerCase());
+    console.log("HELLO YASH!".repeat(7));
+
+    //   ***************************JSON*************************************
+    //This is the example of javaScript Object
+    let javaScriptObject = {
+      name: "shirt",
+      "delivery-time": "1 day",
+      rating: {
+        stars: 4.5,
+        count: 87,
+      },
+      fun: function function1() {
+        console.log("function inside object");
+      },
+    };
+
+    //This is the example of JSON Object
+    let jsonObject = {
+      name: "shirt",
+      "delivery-time": "1 day",
+      rating: {
+        stars: 4.5,
+        count: 87,
+      },
+    };
+  </script>
+</body>
+
+</html>

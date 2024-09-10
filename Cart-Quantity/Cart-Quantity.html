@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart Quantity</title>
+  <link rel="stylesheet" href="Cart-Quantity.css">
+  <script src="Cart-Quantity.js"></script>
+</head>
+
+<body>
+  <p>Cart Quantity</p>
+  <p class="js-show-quantity"></p>
+  <button onclick="showCurrentQuatity()">Show Quantity</button>
+  <button onclick="updateCartQuantity(1)">Add to Cart</button>
+  <button onclick="updateCartQuantity(2)">+2</button>
+  <button onclick="updateCartQuantity(3)">+3</button>
+  <button onclick="updateCartQuantity(-1)">Remove from Cart</button>
+  <button onclick="updateCartQuantity(-2)">-2</button>
+  <button onclick="updateCartQuantity(-3)">-3</button>
+  <button onclick="resetQuantity()">Reset Cart</button>
+</body>
+
+</html>

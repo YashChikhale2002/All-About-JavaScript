@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strings</title>
+</head>
+
+<body>
+  <li>These are <b>Escape character</b> (\')or (\") it acts like text.</li>
+  <li>There is on more character called <b>New line character</b> (\n)</li>
+  <li>String concatenation is the operation of joining character strings.</li>
+  <li><b>Template literals</b>, also called template strings `${templateString}`.</li>
+  <li>Template literals allow easier string interpolation and multi-line strings.</li>
+  <li>They are denoted by backticks (`) instead of single or double quotes.</li>
+  <script>
+    let name = "Yash";
+    console.log(`My name is ${name}`);
+    let cost = 5 + 3 * 3 + 9;
+    let tax = Math.round(cost * 0.1);
+    let totalCost = cost + tax;
+    console.log(`Cost of Food : $${cost}`);
+    console.log(`Tax cost : $${tax}`);
+    console.log(`Total cost : $${totalCost}`);
+    console.log(`Items (${1 + 1}): $${(2095 + 799) / 100}`);
+    console.log("My Name is :" + "Yash");
+    console.log("Total Cost : $" + (5 + 3));
+    console.log(`Total Cost : $${5 + 3}`);
+    //alert(`Total Cost : $${5 + 3}`);
+    console.log("Total Cost : $" + (599 + 295) / 100);
+    console.log(`Total Cost : $${(599 + 295) / 100}`);
+    //alert(`Total Cost : $${(599 + 295) / 100}
+    //Thank You, Come again!`);
+    console.log(`Items${2 + 2} : $${(2095 * 2 + 799 * 2) / 100}`);
+    console.log(`Shipping & Handling: $${(499 * 2) / 100}`);
+    console.log(
+      `Total Before Tax : $${(2095 * 2 + 799 * 2 + 499 * 2) / 100}`
+    );
+    console.log(
+      `Estimated Tax (10%) : $${Math.round((2095 * 2 + 799 * 2 + 499 * 2) * 0.1) / 100
+      }`
+    );
+    console.log(
+      `Order Total : $${(2095 * 2 + 799 * 2 + 499 * 2) / 100 +
+      Math.round((2095 * 2 + 799 * 2 + 499 * 2) * 0.1) / 100
+      }`
+    );
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booleans & If-Else</title>
+</head>
+
+<body>
+  <li>(>, <,>=, <=,===, !==) These are <b>Comparison Operators</b>.</li>
+  <li>Instead of == we use === To avoid the conversion behavior.</li>
+  <li>Instead of != we use !== To avoid the conversion behavior.</li>
+  <li>Comparison Operators have a lower priority then Math.</li>
+  <li>(77, ||, !) These are Logical Operators.</li>
+  <li>Logical have a lower priority then Math & Comparison Operators.</li>
+  <li><b>Falsy Values :</b> false, 0, "", NaN, Undefined, Null.</li>
+  <li><b>Truthy Values :</b> Any value Not on this is truthy.</li>
+  <li><b>Ternary Operator:</b> Condition ? ifCondTrue(if) : ifCondFalse(else)</li>
+  <li>Advantage of this Operator is that we can save it in the variable.</li>
+  <script>
+    console.log(5 == "5");
+    console.log(5 === "5");
+    if (0) {
+      console.log("falsy");
+    }
+    if (1) {
+      console.log("truthy");
+    }
+    // Another Example of Truthy and Falsy value.
+    const cartQuantity = 5;
+    if (cartQuantity) {
+      console.log("Truthy value or not using variable value.");
+    }
+    let ternaryIf = 15 > 2 ? "Its Correct!" : "Its Wrong!";
+    let ternaryElse = 15 > 20 ? "Its Correct!" : "Its Wrong!";
+    console.log(ternaryIf);
+    console.log(ternaryElse);
+    // const age = 15;
+    // if (age >= 16) {
+    //   console.log("You can drive");
+    // } else if (age >= 14) {
+    //   console.log("Almost there!");
+    // } else {
+    //   console.log("You can not drive");
+    // }
+
+    let hour = 14;
+    let name = "Yash";
+    if (hour >= 6 && hour <= 12) {
+      console.log(`Good Morning! ${name}`);
+    } else if (hour >= 13 && hour <= 17) {
+      console.log(`Good Afternoon! ${name}`);
+    } else {
+      console.log(`Good Night! ${name}`);
+    }
+
+    let age = 66;
+    let isHoliday = true;
+
+    if ((age <= 6 || age >= 65) && !isHoliday) {
+      console.log("Discount");
+    } else {
+      console.log("No Discount");
+    }
+  </script>
+</body>
+
+</html>
